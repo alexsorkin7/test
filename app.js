@@ -2,7 +2,7 @@ const canvas = document.getElementById("tetris");
 const context = canvas.getContext("2d");
 const startButton = document.getElementById("startButton");
 const pauseButton = document.getElementById("pauseButton");
-const ROWS = 20;
+const ROWS = 18;
 const COLUMNS = 10;
 const BLOCK_SIZE = 30;
 
@@ -165,9 +165,4 @@ pauseButton.addEventListener("click", () => {
       document.getElementById('pauseButton').innerHTML = gamePaused ? 'resume' : 'pause'
    }
 });
-if (!gameRunning) {
-   gameRunning = true;
-   piece = createPiece();
-   update();
-}
 
